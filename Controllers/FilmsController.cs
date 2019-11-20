@@ -177,12 +177,12 @@ namespace FilmsDbAzureApp.Controllers
         public async Task<ActionResult> Create(/*[Bind(Include = "Id,Description,Producer,Processor,RAM,HDD,Body,Picture,Price")] Product product*/ FormCollection data)
         {
             Film product = new Film();
-            product.Description = data["Description"];
-            product.Producer = data["Producer"];
-            product.Processor = data["Processor"];
-            product.RAM = data["RAM"];
-            product.HDD = data["HDD"];
-            product.Body = data["Body"];
+            product.Genre = data["Genre"];
+            product.Title = data["Title"];
+            product.Production = data["Production"];
+            product.Country = data["Country"];
+            product.Year = data["Year"];
+            product.Cast = data["Cast"];
             product.Price = Convert.ToInt32(data["Price"]);
             if (Request.Files["Picture"] != null)
             {
@@ -228,12 +228,12 @@ namespace FilmsDbAzureApp.Controllers
         {
             Film product = new Film();
             product.Id = Convert.ToInt32(data["Id"]);
-            product.Description = data["Description"];
-            product.Producer = data["Producer"];
-            product.Processor = data["Processor"];
-            product.RAM = data["RAM"];
-            product.HDD = data["HDD"];
-            product.Body = data["Body"];
+            product.Genre = data["Genre"];
+            product.Title = data["Title"];
+            product.Production = data["Production"];
+            product.Country = data["Country"];
+            product.Year = data["Year"];
+            product.Cast = data["Cast"];
             product.Price = Convert.ToInt32(data["Price"]);
             if (Request.Files["Picture"] != null)
             {
